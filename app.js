@@ -241,6 +241,6 @@ C.init();//Driver codes
 
 /**
  * Version: 1.0.1
- * Improvment: fix bugs(validate wrong seat inputs)
+ * Improvment: validate wrong seat inputs (Fix bugs)
  * Time complexity: Ordere of Passengers to one [O(P) Vs. O(1)] 
  */
