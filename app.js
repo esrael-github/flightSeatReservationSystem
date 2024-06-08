@@ -18,9 +18,9 @@ let model = { //an object to get inputs and create flight model
     init: function () {
         const rl = require('readline-sync'); //thrid-part liberary for accepting user input
         let stringInput, qLent;
-        console.log(`Example Seat Inputs(Col-major):`, [[3, 2], [4, 3], [2, 3], [3, 4]]);
-        stringInput = String(rl.question('Enter Seat Inputs:'));//Get seat inputs
-        qLent = Number(rl.question(`Enter Number of Passengers:`));//Any +ve intiger number
+        console.log(`Sample Seat Input [Col-major]:`, [[3, 2], [2, 3], [3, 4]]);
+        stringInput = String(rl.question('\nEnter Seat Inputs: '));//Get seat inputs
+        qLent = Number(rl.question(`Enter Number of Passengers: `));//Any +ve intiger number
 
         arrayInput = model.parseInput(stringInput); // Parse string input to array
         model.isInputValid(arrayInput, qLent)//verifies user inputs 
@@ -75,9 +75,9 @@ let model = { //an object to get inputs and create flight model
 //Driver codes 
 model.init();
 if (fChart.length !== 0 && pQueue.length !== 0) {
-    console.log(`\nPassengers Queue [FIFO]:`)
+    console.log(`\nFlight Chart Model[row-major]:\n`, fChart)
+    console.log(`\nPassengers Queue Model[FIFO]:`);
     console.table(pQueue);
-    console.log(`\nFlight Chart [row-major]:\n`, fChart)
 } else {
     console.log("Data Encoding Error, try agin!")
 }
